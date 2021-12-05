@@ -5,19 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test CORS Images</title>
+    <style>
+        #wrapper {
+            display: grid;
+            width: 100%;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        #wrapper >section >img {
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-    <section>
-        <h1>Same site puppy</h1>
-        <img src="assets/images/puppy.jpeg"/>
-    </section>
-    <section>
-        <h1>Same site puppy</h1>
-        <img src="assets/images/puppy.jpeg"/>
-    </section>
-    <section>
-        <h1>Same site puppy</h1>
-        <img src="assets/images/puppy.jpeg"/>
-    </section>
+    <div id="wrapper">
+        <section>
+            <h1>Same site puppy</h1>
+            <img src="assets/images/puppy.jpeg"/>
+        </section>
+        <section>
+            <h1>Cross sub origin cat</h1>
+            <img src="https://raw.githubusercontent.com/HarikrishnanBalagopal/test-cors-images-helper/main/cat.jpeg"/>
+        </section>
+        <section>
+            <h1>Cross origin eagle</h1>
+            <img src="https://animals.sandiegozoo.org/sites/default/files/2016-08/animals_hero_bald_eagle.jpg"/>
+        </section>
+    </div>
 </body>
 </html>
